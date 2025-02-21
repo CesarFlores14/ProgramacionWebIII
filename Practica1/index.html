@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica de Layouts en HTML</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .seccion {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+        .seccion h2 {
+            margin-top: 0;
+        }
+
+        /* Layout de una columna */
+        .una_columna {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Layout de dos columnas */
+        .dos_columnas {
+            display: flex;
+            gap: 10px;
+        }
+        .dos_columnas .contenido-main {
+            flex: 3;
+            background-color: #e3f2fd;
+            padding: 20px;
+        }
+        .dos_columnas .barra-lateral {
+            flex: 1;
+            background-color: #bbdefb;
+            padding: 20px;
+        }
+
+        /* Layout de tres columnas */
+        .tres_columnas {
+            display: flex;
+            gap: 10px;
+        }
+        .tres_columnas .column {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        .tres_columnas .column:nth-child(1) {
+            background-color: #fff3e0;
+        }
+        .tres_columnas .column:nth-child(2) {
+            background-color: #ffe0b2;
+        }
+        .tres_columnas .column:nth-child(3) {
+            background-color: #ffcc80;
+        }
+
+        /* Layout con cabecera y pie de página */
+        .header-footer {
+            display: flex;
+            flex-direction: column;
+            min-height: 200px;
+        }
+        .header-footer header {
+            background-color: #0a420a;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .header-footer .contenido-main {
+            flex: 1;
+            background-color: #28faa3;
+            padding: 20px;
+        }
+        .header-footer footer {
+            background-color: #0aa558;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Layout de cuadrícula */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+        .grid-layout .grid-item {
+            background-color: #00ffbf;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Práctica de Layouts en HTML</h1>
+
+    <!-- Layout de una columna -->
+    <div class="seccion">
+        <h2>1. Layout de una columna</h2>
+        <div class="una_columna">
+            <p>Este es un ejemplo de un layout de una sola columna.</p>
+        </div>
+    </div>
+
+    <!-- Layout de dos columnas -->
+    <div class="seccion">
+        <h2>2. Layout de dos columnas</h2>
+        <div class="dos_columnas">
+            <div class="contenido-main">
+                <p>Contenido principal.</p>
+            </div>
+            <div class="barra-lateral">
+                <p>Barra lateral.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Layout de tres columnas -->
+    <div class="seccion">
+        <h2>3. Layout de tres columnas</h2>
+        <div class="tres_columnas">
+            <div class="column">
+                <p>Columna 1</p>
+            </div>
+            <div class="column">
+                <p>Columna 2</p>
+            </div>
+            <div class="column">
+                <p>Columna 3</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Layout con cabecera y pie de página -->
+    <div class="seccion">
+        <h2>4. Layout con cabecera y pie de página</h2>
+        <div class="header-footer">
+            <header>
+                <p>Cabecera</p>
+            </header>
+            <div class="contenido-main">
+                <p>Contenido principal.</p>
+            </div>
+            <footer>
+                <p>Pie de página</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Layout de cuadrícula -->
+    <div class="seccion">
+        <h2>5. Layout de cuadrícula</h2>
+        <div class="grid-layout">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+        </div>
+    </div>
+</body>
+</html>
